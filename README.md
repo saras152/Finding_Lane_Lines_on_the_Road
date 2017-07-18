@@ -23,13 +23,11 @@ The goals / steps of this project are the following:
 [maskedcanny]: ./process_images/maskoncanny.png "Mask on Canny filtered"
 [hough]: ./process_images/houghoutput.png "Hough output"
 [result]: ./process_images/result.png "Result"
-[horizontallines]: ./process_images/hlines.png "Horizontal lines"
-[shade_original]: ./process_images/shade_original.png "Shaded Road"
 
+[shade_original]: ./process_images/shade_original.png "Shaded Road"
 [shadedlines]: ./process_images/shade_lines.png "Lines with shade"
 
 [nolinesright_original]: ./process_images/nolinesright_original.png "No strong lines on the right"
-
 [nolinesright]: ./process_images/nolinesright.png "No detected lines on the right"
 
 [brightroad]: ./process_images/brightroad_original.png "Road texture changed to bright color"
@@ -62,14 +60,19 @@ If you'd like to include images to show how the pipeline works, here is how to i
 ![alt text][maskedcanny]
 ![alt text][hough]
 ![alt text][result]
+
 There were some instances where sometimes there were few lines of undesired slope that resulted in distorted lines. Such cases were also taken care of. 
-![alt text][horizontallines]
+
 ![alt text][shade_original]
 ![alt text][shadedlines]
+
 There were also few cases where there were no lines detected for one of the sides. Such cases were also taken care of.
+
 ![alt text][nolinesright_original]
 ![alt text][nolinesright]
+
 There were instances where the road texture changed, resulting in wrong calibration of the thresholds. These cases were also taken care of.
+
 ![alt text][brightroad]
 ![alt text][zigzaglines]
 
