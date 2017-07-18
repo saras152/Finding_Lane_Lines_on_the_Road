@@ -1,11 +1,8 @@
-# roadsense
-This is a repository for the term1 projects of Udacity's SDCar nanodegree
+## **Attempt to Find Lane Lines on the Road by RaghuNath (RaNa)** 
 
-# **Finding Lane Lines on the Road** 
 
-## Writeup Template
 
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
+
 
 ---
 
@@ -18,21 +15,61 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[original]: ./process_images/original.png "Original"
+[gray]: ./process_images/gray.png "Gray"
+[gauss]: ./process_images/gaussfiltered.png "Gauss output"
+[canny]: ./process_images/edgedetected.png "Canny output"
+[mask]: ./process_images/maskonoriginal.png "Mask"
+[maskedcanny]: ./process_images/maskoncanny.png "Mask on Canny filtered"
+[hough]: ./process_images/houghoutput.png "Hough output"
+[result]: ./process_images/result.png "Result"
+[horizontallines]: ./process_images/hlines.png "Horizontal lines"
+[shadeoriginal]: ./process_images/shade_original.png "Shaded Road"
+
+[shadedlines]: ./process_images/shade_lines.png "Lines with shade"
+
+[nolinesright_original]: ./process_images/nolinesright_original.png "No strong lines on the right"
+
+[nolinesright]: ./process_images/nolinesright.png "No detected lines on the right"
+
+[brightroad]: ./process_images/brightroad_original.png "Road texture changed to bright color"
+[zigzaglines]: ./process_images/zigzaglines.png "Resulting zigzag lines"
 
 ---
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Description of my pipeline
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+The pipeline is implemented in the following sequence of steps:
+1. The original RGB image is converted to gray scale image
+2. The gray scale image is blurred to remove unwanted spikes in thresholds
+3. The smoothed image is used to detect edge sthrough CANNY edge detection function
+4. A mask is applied on the area, for the area of interest
+5. The Hough transformation is applied to identify the lines in the image. At this stage, each frame consisted of multiple lines.
+
+RBG_IMAGE => GRAYSCALE_IMAGE => GAUSSBLURRED_IMAGE => EDGE_DETECTED_IMAGE => MASKED_EDGED_IMAGE => HOUGH_TRANSFORMED_IMAGE
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-![alt text][image1]
+![alt text][original]
+![alt text][gray]
+![alt text][gauss]
+![alt text][canny]
+![alt text][mask]
+![alt text][maskedcanny]
+![alt text][hough]
+![alt text][result]
+![alt text][horizontallines]
+![alt text][shade_original]
+![alt text][shadedlines]
+![alt text][nolinesright_original]
+![alt text][nolinesright]
+![alt text][brightroad]
+![alt text][zigzaglines]
+
 
 
 ### 2. Identify potential shortcomings with your current pipeline
