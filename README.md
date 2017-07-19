@@ -65,6 +65,7 @@ For a good image (i.e. an image with crisp lane lines and good contrast), findin
 RBG => GRAYSCALE => GAUSSBLURRED => EDGE_DETECTED => MASKED_EDGED => HOUGH_TRANSFORMED => LINES_SUPERIMPOSED
 
 The folling sequence of images indicate the process followed.
+
 ![A sample sequence][original]
 ![alt text][gray]
 ![alt text][gauss]
