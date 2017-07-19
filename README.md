@@ -112,6 +112,7 @@ Some of the expected shortcomings are:
 4. When the lane lines fade away on the roads, this pipeline fails to detect them. The thresholds are set with some assumptions.
 5. When the road has pot-holes, some of which may be along the travel direction, this pipeline detects the edges of the pot-hole too, and includes them in estimating the lane lines. 
 6. When the vehicle is going on a non-paved road, the jitter is so very high that identifying the lane-lines would be difficult.
+7. The implementation uses global variables for moving average implementation. 
 
 The roads are never this ideal always. This list never ends. 
 
@@ -124,5 +125,5 @@ Some of the possible improvements are:
 3. A seperate case handling has to be included for double lanelines and Y-junction's lane lines. 
 4. Canny edge detection for the complete image may result in wrong edges for faded lane lines, or partially shaded roads. A smaller frame of sufficient pixels needs to be identified that will move around the desired zones of the image to process canny edge algorithm with different thresholds in each part of the image. This is to be adaptive. 
 5. This pipeline identifies only the straight lines. It does not detect curved roads yet, due to the implementation of 1st order curve fitting implementation. A higher order curve fit of the correct points will be able to give indication of road curve too. 
-
+6. The global variable usage may be replaced with passing arguments to the function.
 This list is also never ending, and there may never be a perfect pipeline for this purpose. This has to evolve as we test more and more images/videos, leaning from the failures.  
