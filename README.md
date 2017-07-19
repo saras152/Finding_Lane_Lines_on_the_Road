@@ -11,7 +11,7 @@
 The intent of this project is the following:
 * Make a pipeline that finds lane lines on the road from a video
 
-
+The output of the implemented pipeline is stored in the same repo at "test_videos_output/challenge.mp4"
 
 [//]: # (Image References)
 
