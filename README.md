@@ -11,7 +11,7 @@
 The intent of this project is the following:
 * Make a pipeline that finds lane lines on the road from a video
 
-The output of the implemented pipeline is stored in the same repo at "test_videos_output/challenge.mp4"
+The output of the implemented pipeline is stored in the same repo at "test_videos_outout/challenge.mp4"
 
 [//]: # (Image References)
 
@@ -40,10 +40,9 @@ This repo contains a Jupyter notebook that was developed and tested in the follo
  * OpenCV 3.2.0
  * MoviePy 0.2.3.2
  * IPython 5.1.0
- 
-This repo also contains a html file that shows the contents of the jupyter notebook after all the cells are run. 
 
-This repo contains few folders to hold test images, test videos and output of test videos. 
+
+This repo contains few folders to hold test images, test videos and output of test videos(this folder title is wrongly spelled, sorry for the typo). 
 
 ### Reflection
 
