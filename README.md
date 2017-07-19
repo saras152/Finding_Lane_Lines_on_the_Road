@@ -52,7 +52,7 @@ This repo contains few folders to hold test images, test videos and output of te
 The pipeline is implemented in the following sequence of steps:
 1. The original RGB image is converted to gray scale image
 2. The gray scale image is blurred to remove unwanted spikes in thresholds
-3. The smoothed image is used to detect edge sthrough CANNY edge detection function
+3. The smoothed image is used to detect edges through canny edge detection function
 4. A mask is applied on the area, for the area of interest
 5. The Hough transformation is applied to identify the lines in the image. At this stage, each frame consisted of multiple lines.
 6. The lane lines are identified from the set of all lines, and the individual frames of the image are marked.
