@@ -57,7 +57,6 @@ The pipeline is implemented in the following sequence of steps:
 6. The lane lines are identified from the set of all lines, and the individual frames of the image are marked.
 
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
 For a good image (i.e. an image with crisp lane lines and good contrast), finding the lane lines is very straightforward. This includes the following steps: 
 
@@ -102,7 +101,7 @@ Some of the possible variations in the images observed:
 ### 2. Potential shortcomings with current pipeline
 
 
-This pipeline is not robust, and may not work for all the real conditions. This is a functional pipeline for a constrained conditions. 
+This pipeline is not robust, and may not work for all the real conditions. This is a functional pipeline for a set of constrained conditions. 
 
 Some of the expected shortcomings are: 
 1. The masking polygon is fixed at corners. When the vehicle moves off the lane, the lane lines may no longer be identifiable. 
